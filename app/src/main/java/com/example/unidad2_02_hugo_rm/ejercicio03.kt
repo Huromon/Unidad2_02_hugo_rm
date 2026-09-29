@@ -28,7 +28,10 @@ fun main(){
         }
 
     }
-    println(letras.toSortedMap())
+
+    var ordenar: Map<Char,Int> = letras.toList().sortedByDescending { (Char, Int) -> Int }.toMap()
+    ordenar.forEach { ch, i -> println( "$ch = $i")  }
+
 
 
 
